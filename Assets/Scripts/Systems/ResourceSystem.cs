@@ -18,6 +18,6 @@ public class ResourceSystem : StaticInstance<ResourceSystem> {
 		IngredientsDict = Ingredients.ToDictionary(r => r.ingredientType, r => r);
 	}
 
-	public ScriptableIngredient GetExampleHero(IngredientType t) => IngredientsDict[t];
-	public ScriptableIngredient GetRandomHero() => Ingredients[Random.Range(0, Ingredients.Count)];
+	public ScriptableIngredient GetIngredient(IngredientType t) => IngredientsDict[t];
+	public ScriptableIngredient GetRandomIngredient() => Ingredients[Random.Range(0, Ingredients.Count)];
 }   
