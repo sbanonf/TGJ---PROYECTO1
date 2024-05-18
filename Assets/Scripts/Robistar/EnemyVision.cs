@@ -11,19 +11,25 @@ public class EnemyVision : MonoBehaviour
     private bool flip = false;
 
     public GameObject papa;
+    public GameObject texto;
 
     private void Start()
     {
         StartCoroutine(Timer());
+    }
+
+    public IEnumerator Timer2() {
+        yield return new WaitForSeconds(1);
     }
     private void OnTriggerEnter2D(Collider2D collision)
     {
         if (collision.gameObject.tag == "Player")
         {
             Debug.Log("Me miraron feo");
-            //TimeManager.instance.time -=2;
+            
         }
-    }  
+    }
+
 
     public IEnumerator Timer() {
         while (true)

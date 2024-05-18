@@ -135,7 +135,7 @@ GameObject:
   - component: {fileID: 160485565}
   - component: {fileID: 160485563}
   m_Layer: 0
-  m_Name: Square
+  m_Name: Robistar
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -249,7 +249,7 @@ GameObject:
   - component: {fileID: 871238794}
   - component: {fileID: 871238793}
   m_Layer: 0
-  m_Name: Triangle (1)
+  m_Name: Zona de vision
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -331,7 +331,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   waitingtime: 2
+  lerpDuration: 0
   papa: {fileID: 160485562}
+  texto: {fileID: 0}
 --- !u!212 &871238795
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -490,11 +492,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7077002579187134100, guid: b90d3fd4e976d534bbbe9097355cb142, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 4.49
+      value: 4.14
       objectReference: {fileID: 0}
     - target: {fileID: 7077002579187134100, guid: b90d3fd4e976d534bbbe9097355cb142, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0.31
+      value: 0.02
       objectReference: {fileID: 0}
     - target: {fileID: 7077002579187134100, guid: b90d3fd4e976d534bbbe9097355cb142, type: 3}
       propertyPath: m_LocalPosition.z
