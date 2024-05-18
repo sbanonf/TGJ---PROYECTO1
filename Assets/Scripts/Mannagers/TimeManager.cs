@@ -19,9 +19,11 @@ public class TimeManager : MonoBehaviour
 
     private void Awake()
     {
-        if (instance == null) { 
+        if (instance == null)
+        {
             instance = this;
         }
+        DontDestroyOnLoad(this);
     }
     private void Start()
     {
