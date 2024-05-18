@@ -58,7 +58,7 @@ public class TimeManager : MonoBehaviour
             if (SceneManager.GetActiveScene().name == "PruebasSebastian")
             {
                 SceneManager.LoadScene("PruebasRestaurante");
-                EmpezarTurno();
+                EmpezarTurnoRestaurante();
             }
             else if (SceneManager.GetActiveScene().name == "PruebasRestaurante")
             {
@@ -76,6 +76,11 @@ public class TimeManager : MonoBehaviour
         CorreTiempo = true;
         TurnoIndex++;
         tiempoRuntime = tiempoxTurno;
+    }
+
+    public void EmpezarTurnoRestaurante() {
+        CorreTiempo = false;
+
     }
     public void SetGameOver() { 
         isGameFinished = true; ;
