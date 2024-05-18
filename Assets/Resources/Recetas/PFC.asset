@@ -13,5 +13,8 @@ MonoBehaviour:
   m_Name: PFC
   m_EditorClassIdentifier: 
   nombre: PFC
+  Descripcion: Cubeta de de lo que parece ser un tentaculo frito, de alguna forma
+    te resulta familiar.
   ingredientsNeeded: []
   sprite: {fileID: 21300000, guid: 5e51606ed9985254ea19d672f9780232, type: 3}
+  puntos: 0
