@@ -13,6 +13,10 @@ public class BootItem : Collectibles
     public CinemachineVirtualCamera cm2;
     protected override void Collect(GameObject player)
     {
+        if (player.GetComponent<PlayerMovement>().useBoot)
+        {
+            return;
+        }
         if (canWalk)
         {
             pm = player.GetComponent<PlayerMovement>();
