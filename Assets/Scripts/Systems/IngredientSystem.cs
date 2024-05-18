@@ -25,4 +25,8 @@ public class IngredientSystem : StaticInstance<IngredientSystem>{
 			Ingredients.Add(ingredientType, 1);
 		}
 	}
+    public Dictionary<IngredientType, int> GetAllIngredients()
+    {
+		return Ingredients;
+    }
 }
