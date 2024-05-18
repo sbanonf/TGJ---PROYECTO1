@@ -6,6 +6,7 @@ public class PlayerMovement : MonoBehaviour {
     private Vector2 mov;
     public float speed = 5f;
     public bool canMove,useBoot = false;
+    public bool canRun = false;
     Rigidbody2D rb;
 
     private void Awake()
