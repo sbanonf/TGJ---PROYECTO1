@@ -24,12 +24,12 @@ public class PlayerInventory : MonoBehaviour {
 
 	private void DropIngredients(){
 		for (int i = 0; i < carryIngredients.Length; i++) {
-				if(carryIngredients[i] == IngredientType.None) 
-					continue;
-				FindObjectOfType<IngredientSystem>().AddIngredient(carryIngredients[i]);
-				carryIngredients[i] = IngredientType.None;
-				transform.GetChild(i).GetComponent<SpriteRenderer>().sprite = null;
-			}
+			if(carryIngredients[i] == IngredientType.None) 
+				continue;
+			FindObjectOfType<IngredientSystem>().AddIngredient(carryIngredients[i]);
+			carryIngredients[i] = IngredientType.None;
+			transform.GetChild(i).GetComponent<SpriteRenderer>().sprite = null;
+		}
 	}
 
 	void Update(){

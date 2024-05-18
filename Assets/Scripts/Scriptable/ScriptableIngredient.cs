@@ -13,8 +13,8 @@ public class ScriptableIngredient : ScriptableObject {
 public enum IngredientType {
 	None,
 	PapaAlien,
-	Banana,
-	Cherry,
-	Orange,
-	Pear
+	AceitunaCarnivora,
+	HuevoDeVaca,
+	PolvoSolar,
+	BolsaDeTentaculos
 }

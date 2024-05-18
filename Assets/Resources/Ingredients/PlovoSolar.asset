@@ -10,7 +10,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: e38e85d28eb75b745a54cbf8ea199a63, type: 3}
-  m_Name: PapaAlien
+  m_Name: PlovoSolar
   m_EditorClassIdentifier: 
-  sprite: {fileID: 21300000, guid: acaf7a1a9e24d6348b3d51c9168b7455, type: 3}
-  ingredientType: 1
+  sprite: {fileID: 21300000, guid: 6531657ee74bde34b98418f8ca7c47ff, type: 3}
+  ingredientType: 4

@@ -10,14 +10,10 @@ public class Ingredient : MonoBehaviour {
 		SelectIngredient();
 	}
 
-	void Update() {
-		
-	}
-
 	private void SelectIngredient() {
 		ScriptableIngredient ingredient = ResourceSystem.Instance.GetRandomIngredient();
 
-		GetComponent<SpriteRenderer>().sprite = ingredient.sprite;
+		GetComponentInChildren<SpriteRenderer>().sprite = ingredient.sprite;
 		ingredientType = ingredient.ingredientType;
 	}
 
