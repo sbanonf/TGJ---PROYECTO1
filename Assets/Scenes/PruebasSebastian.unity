@@ -593,6 +593,18 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 897199223340581538, guid: a7b44318f046d114bb7d8014cd8c2291, type: 3}
+      propertyPath: m_Color.b
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 897199223340581538, guid: a7b44318f046d114bb7d8014cd8c2291, type: 3}
+      propertyPath: m_Color.g
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 897199223340581538, guid: a7b44318f046d114bb7d8014cd8c2291, type: 3}
+      propertyPath: m_Color.r
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 6347116912142544245, guid: a7b44318f046d114bb7d8014cd8c2291, type: 3}
       propertyPath: m_Name
       value: Robistar
