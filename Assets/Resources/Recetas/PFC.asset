@@ -10,12 +10,8 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 71b01d0d1ef999e49baca3a510e5de64, type: 3}
-  m_Name: TentaculoAlaBrasa
+  m_Name: PFC
   m_EditorClassIdentifier: 
-  nombre: Tentaculo a la Brasa
-  Descripcion: "Tentaculo extra\xEDdo del abdomen de algui\xE9n, condimentado al
-    gusto, cocinado a la brasa."
-  ingredientsNeeded:
-  - ingrendiente: {fileID: 11400000, guid: be95665796e5505409387f40524b5273, type: 2}
-    quantity: 3
-  sprite: {fileID: 21300000, guid: b1cbad5fa7c6fe54d9e639e2a3886abd, type: 3}
+  nombre: PFC
+  ingredientsNeeded: []
+  sprite: {fileID: 21300000, guid: 5e51606ed9985254ea19d672f9780232, type: 3}
