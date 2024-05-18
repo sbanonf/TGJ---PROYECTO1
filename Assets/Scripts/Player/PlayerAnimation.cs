@@ -4,10 +4,12 @@ public class PlayerAnimation : MonoBehaviour {
 	
 	private Animator animator;
 	private PlayerMovement playerMovement;
+	private PlayerInventory playerInventory;
 	
 	private void Awake() {
 		animator = GetComponentInChildren<Animator>();
-		playerMovement = GetComponent<PlayerMovement>();
+		playerMovement = GetComponentInParent<PlayerMovement>();
+		playerInventory = GetComponentInParent<PlayerInventory>();
 	}
 	
 	void Update() {
@@ -18,5 +20,6 @@ public class PlayerAnimation : MonoBehaviour {
 		}
 
 		animator.SetBool("IsMoving", playerMovement.IsMoving());
+		animator.SetBool("IsCarrying", playerInventory.IsCarrying());
 	}
 }

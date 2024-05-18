@@ -38,4 +38,8 @@ public class PlayerInventory : MonoBehaviour {
 		}
 	}
 
+	public bool IsCarrying() {
+		return carryIngredient != IngredientType.None;
+	}
+
 }
