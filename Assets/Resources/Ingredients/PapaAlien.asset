@@ -12,5 +12,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e38e85d28eb75b745a54cbf8ea199a63, type: 3}
   m_Name: PapaAlien
   m_EditorClassIdentifier: 
-  sprite: {fileID: 0}
-  ingredientType: 0
+  sprite: {fileID: 21300000, guid: 7c8ee158994116f47a22f43614c04250, type: 3}
+  ingredientType: 1

@@ -11,7 +11,8 @@ public class ScriptableIngredient : ScriptableObject {
 
 [Serializable]
 public enum IngredientType {
-	Apple,
+	None,
+	PapaAlien,
 	Banana,
 	Cherry,
 	Orange,
