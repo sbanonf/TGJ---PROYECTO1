@@ -14,7 +14,7 @@ public class PlayerInventory : MonoBehaviour {
 
 	void Update(){
 		if (Input.GetKeyDown(KeyCode.F) && canDrop && carryIngredient != IngredientType.None) {
-			FindObjectOfType<ShoppingCar>().AddIngredient(carryIngredient);
+			FindObjectOfType<IngredientSystem>().AddIngredient(carryIngredient);
 			transform.GetChild(0).GetComponent<SpriteRenderer>().sprite = null;
 			carryIngredient = IngredientType.None;
 		}
