@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using Cinemachine;
+using UnityEngine.UI;
 
 public class Obstacule : MonoBehaviour
 {
@@ -13,8 +14,8 @@ public class Obstacule : MonoBehaviour
     {
         playerMovement = GetComponentInParent<PlayerMovement>();
     }
-    // Start is called before the first frame update
 
+    // Start is called before the first frame update
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
@@ -25,12 +26,14 @@ public class Obstacule : MonoBehaviour
             if (use)
             {
                 playerMovement.canMove = true;
+                
             }
             else
             {
+                playerMovement.canMove = false;
                 cm1.Priority = 9;
                 cm2.Priority = 11;
-                playerMovement.canMove = false;
+                
             }
             
         }
@@ -53,4 +56,5 @@ public class Obstacule : MonoBehaviour
         cm2.Priority = 9;
         playerMovement.canMove = true;
     }
+
 }

@@ -11,6 +11,7 @@ public class BootItem : Collectibles
     public PlayerMovement pm;
     public CinemachineVirtualCamera cm1;
     public CinemachineVirtualCamera cm2;
+
     protected override void Collect(GameObject player)
     {
         if (player.GetComponent<PlayerMovement>().useBoot)
@@ -34,4 +35,5 @@ public class BootItem : Collectibles
         yield return new WaitForSecondsRealtime(tiempo);
         Destroy(this.gameObject);
     }
+
 }

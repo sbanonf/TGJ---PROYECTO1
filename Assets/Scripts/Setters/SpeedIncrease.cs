@@ -11,9 +11,14 @@ public class SpeedIncrease : Collectibles
     
     protected override void Collect(GameObject player)
     {
-        if(canPower)
+        if (player.GetComponent<PlayerMovement>().canRun)
+        {
+            return;
+        }
+        if (canPower)
         {
             pm = player.GetComponent<PlayerMovement>();
+            player.GetComponent<PlayerMovement>().canRun = true;    
             float veloc = pm.speed;
             veloc += cantv;
             pm.speed = veloc;
@@ -29,6 +34,7 @@ public class SpeedIncrease : Collectibles
         canPower = false;
         this.gameObject.GetComponent<SpriteRenderer>().enabled = false;
         yield return new WaitForSecondsRealtime(tiempo);
+        pm.GetComponent<PlayerMovement>().canRun = false;
         pm.speed -= cantv;
         Destroy(this.gameObject);
     }
