@@ -5,14 +5,17 @@ public class PlayerMovement : MonoBehaviour {
 
     private Vector2 mov;
     public float speed = 5f;
-    public float speedIce;
-    private bool onIce;
-
+    public bool canMove,useBoot = false;
     Rigidbody2D rb;
 
     private void Awake()
     {
         rb = GetComponent<Rigidbody2D>();
+    }
+
+    private void Start()
+    {
+        canMove = true;
     }
 
     // Update is called once per frame
@@ -22,10 +25,12 @@ public class PlayerMovement : MonoBehaviour {
     }
 
     private void FixedUpdate() {
-        rb.velocity = mov * speed;
-        if (onIce){
-            rb.AddForce(mov * speedIce, ForceMode2D.Impulse);
+        if (canMove || useBoot)
+        {
+            rb.velocity = mov * speed;
         }
+        
+        
     }
 
     public Vector2 GetMov() {
@@ -36,19 +41,4 @@ public class PlayerMovement : MonoBehaviour {
         return mov != Vector2.zero;
     }
 
-    private void OnTriggerEnter2D(Collider2D collision)
-    {
-        if (collision.gameObject.tag == "Ice")
-        {
-            onIce = true;
-        }
-    }
-
-    private void OnTriggerExit2D(Collider2D collision)
-    {
-        if (collision.gameObject.tag == "Ice")
-        {
-            onIce = false;
-        }
-    }
 }
