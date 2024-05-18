@@ -17,15 +17,16 @@ public class FoodManager : MonoBehaviour
     }
     private void Update()
     {
-        allIngredients= IngredientSystem.Instance.GetAllIngredients();
+        allIngredients = IngredientSystem.Instance.GetAllIngredients();
         List<IngredientType> ingredientKeys = allIngredients.Keys.ToList();
         List<int> ingredientValue = allIngredients.Values.ToList();
-       for(int i = 0; i < allIngredients.Count; i++)
+        for (int i = 0; i < allIngredients.Count; i++)
         {
             ScriptableIngredient var = ResourceSystem.Instance.GetIngredient(ingredientKeys[i]);
-            Debug.Log(var);
             images[i].sprite = var.sprite;
-            textos[i].text= ingredientValue[i].ToString();
+            textos[i].text = ingredientValue[i].ToString();
+            Debug.Log("Valor:"+ingredientValue[i].ToString());
+            Debug.Log("Ingrediente: "+ingredientKeys[i].ToString());
         }
     }   
 }

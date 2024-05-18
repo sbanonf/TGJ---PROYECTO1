@@ -1,7 +1,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class IngredientSystem : StaticInstance<IngredientSystem>{
+public class IngredientSystem : Singleton<IngredientSystem>{
 	private Dictionary<IngredientType, int> Ingredients;
 
 	protected override void Awake() {

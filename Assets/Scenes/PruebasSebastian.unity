@@ -1201,7 +1201,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4852490430407326313, guid: 94e3d11c722948e40849a68b9c573b10, type: 3}
       propertyPath: tiempoxTurno
-      value: 10
+      value: 30
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
