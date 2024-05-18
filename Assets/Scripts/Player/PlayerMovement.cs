@@ -7,6 +7,7 @@ public class PlayerMovement : MonoBehaviour {
     public float speed = 5f;
     public bool canMove,useBoot = false;
     public bool canRun = false;
+    public bool timeOut = false;
     Rigidbody2D rb;
 
     private void Awake()

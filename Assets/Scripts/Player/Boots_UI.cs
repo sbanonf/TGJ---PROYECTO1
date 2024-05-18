@@ -7,6 +7,7 @@ public class Boots_UI : MonoBehaviour
     public PlayerMovement player;
     public GameObject playerVida;
     public GameObject playerVida1;
+    public GameObject playerVida2;
     // Start is called before the first frame update
     void Start()
     {
@@ -32,6 +33,15 @@ public class Boots_UI : MonoBehaviour
         else
         {
             playerVida1.SetActive(false);
+        }
+
+        if (player.timeOut)
+        {
+            playerVida2.SetActive(true);
+        }
+        else
+        {
+            playerVida2.SetActive(false);
         }
     }
 }
