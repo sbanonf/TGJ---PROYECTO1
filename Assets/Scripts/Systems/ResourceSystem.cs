@@ -2,15 +2,11 @@ using System.Collections.Generic;
 using System.Linq;
 using UnityEngine;
 
-/// <summary>
-/// One repository for all scriptable objects. Create your query methods here to keep your business logic clean.
-/// I make this a MonoBehaviour as sometimes I add some debug/development references in the editor.
-/// If you don't feel free to make this a standard class
-/// </summary>
+
 public class ResourceSystem : StaticInstance<ResourceSystem> {
-	// use the comments as an example of how to use this system
-	//public List<ScriptableExampleHero> ExampleHeroes { get; private set; }
-	//private Dictionary<ExampleHeroType, ScriptableExampleHero> _ExampleHeroesDict;
+
+	public List<ScriptableIngredient> Ingredients { get; private set; }
+	private Dictionary<IngredientType, ScriptableIngredient> IngredientsDict;
 
 	protected override void Awake() {
 		base.Awake();
@@ -18,10 +14,10 @@ public class ResourceSystem : StaticInstance<ResourceSystem> {
 	}
 
 	private void AssembleResources() {
-		//ExampleHeroes = Resources.LoadAll<ScriptableExampleHero>("ExampleHeroes").ToList();
-		//_ExampleHeroesDict = ExampleHeroes.ToDictionary(r => r.HeroType, r => r);
+		Ingredients = Resources.LoadAll<ScriptableIngredient>("Ingredients").ToList();
+		IngredientsDict = Ingredients.ToDictionary(r => r.ingredientType, r => r);
 	}
 
-	//public ScriptableExampleHero GetExampleHero(ExampleHeroType t) => _ExampleHeroesDict[t];
-	//public ScriptableExampleHero GetRandomHero() => ExampleHeroes[Random.Range(0, ExampleHeroes.Count)];
+	public ScriptableIngredient GetExampleHero(IngredientType t) => IngredientsDict[t];
+	public ScriptableIngredient GetRandomHero() => Ingredients[Random.Range(0, Ingredients.Count)];
 }   
