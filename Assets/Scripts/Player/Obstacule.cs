@@ -9,9 +9,7 @@ public class Obstacule : MonoBehaviour
     private PlayerMovement playerMovement;
     public CinemachineVirtualCamera cm1;
     public CinemachineVirtualCamera cm2;
-    [SerializeField] private float _dissolveDuration = 1f;
 
-    public Image playerVida;
     private void Awake()
     {
         playerMovement = GetComponentInParent<PlayerMovement>();
