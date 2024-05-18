@@ -27,6 +27,7 @@ public class TimeManager : MonoBehaviour
     }
     private void Start()
     {
+        tmpro = GameObject.FindWithTag("Textoxd").GetComponent<TextMeshProUGUI>();
         EmpezarTurno();
     }
     private void Update()
