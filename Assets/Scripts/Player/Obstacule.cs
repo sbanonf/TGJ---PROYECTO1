@@ -1,10 +1,13 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using Cinemachine;
 
 public class Obstacule : MonoBehaviour
 {
     private PlayerMovement playerMovement;
+    public CinemachineVirtualCamera cm1;
+    public CinemachineVirtualCamera cm2;
 
     private void Awake()
     {
@@ -25,6 +28,8 @@ public class Obstacule : MonoBehaviour
             }
             else
             {
+                cm1.Priority = 9;
+                cm2.Priority = 11;
                 playerMovement.canMove = false;
             }
             
@@ -36,6 +41,7 @@ public class Obstacule : MonoBehaviour
     {
         if (collision.gameObject.tag == "Ice")
         {
+            
             playerMovement.useBoot = false;
         }
     }
@@ -43,6 +49,8 @@ public class Obstacule : MonoBehaviour
 
     private void OnCollisionEnter2D(Collision2D collision)
     {
+        cm1.Priority = 11;
+        cm2.Priority = 9;
         playerMovement.canMove = true;
     }
 }
