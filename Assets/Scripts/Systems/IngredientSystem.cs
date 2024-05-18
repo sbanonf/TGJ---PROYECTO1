@@ -1,12 +1,12 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class IngredientSystem : Singleton<IngredientSystem>{
-	private Dictionary<IngredientType, int> Ingredients;
+public class IngredientSystem : StaticInstance<IngredientSystem>{
+	private static Dictionary<IngredientType, int> Ingredients = new();
 
 	protected override void Awake() {
 		base.Awake();
-		Ingredients = new Dictionary<IngredientType, int>();
+		// Ingredients = new Dictionary<IngredientType, int>();
 	}
 
 	void Update() {
