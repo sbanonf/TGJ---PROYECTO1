@@ -13,7 +13,6 @@ GameObject:
   - component: {fileID: 4796109937553464914}
   - component: {fileID: 7718889784370707604}
   - component: {fileID: 8383961483337874631}
-  - component: {fileID: 6499600218438451233}
   m_Layer: 0
   m_Name: ShoppingCar
   m_TagString: ShoppingCar
@@ -195,15 +194,3 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
---- !u!114 &6499600218438451233
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4135513425584994059}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 848b2c178ba61514fbf2018b1fd83482, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 

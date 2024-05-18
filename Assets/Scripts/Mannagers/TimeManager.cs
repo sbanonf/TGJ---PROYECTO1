@@ -4,11 +4,11 @@ using System.Collections.Generic;
 using TMPro;
 using Unity.Mathematics;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class TimeManager : MonoBehaviour
 {
     public static TimeManager instance;
-    public TextMeshProUGUI tmpro;
     public bool isGameFinished = false;
     public bool CorreTiempo = false;
     [SerializeField] public int TurnoIndex;
@@ -19,9 +19,15 @@ public class TimeManager : MonoBehaviour
 
     private void Awake()
     {
-        if (instance == null) { 
+        if (instance != null && instance != this)
+        {
+            Destroy(this.gameObject);
+        }
+        else
+        {
             instance = this;
         }
+        DontDestroyOnLoad(this);
     }
     private void Start()
     {
@@ -35,29 +41,41 @@ public class TimeManager : MonoBehaviour
                 if (tiempoRuntime > 0)
                 {
                     tiempoRuntime -= Time.deltaTime;
-                    tmpro.text = Math.Round(tiempoRuntime).ToString();
                 }
                 else
                 {
                     tiempoRuntime = 0;
-                    tmpro.text = Math.Round(tiempoRuntime).ToString();
-                    EmpezarTurno();
+                    FinTurno();
                 }
             }            
+        }
+    }
+
+    public void FinTurno() {
+        if (TurnoIndex < NumeroTurnos)
+        {
+            //Cambia de Escena XD
+            if (SceneManager.GetActiveScene().name == "PruebasSebastian")
+            {
+                SceneManager.LoadScene("PruebasRestaurante");
+                EmpezarTurno();
+            }
+            else if (SceneManager.GetActiveScene().name == "PruebasRestaurante")
+            {
+                SceneManager.LoadScene("PruebasSebastian");
+                EmpezarTurno();
+            }
+        }
+        else
+        {
+            Debug.Log("Fin del Juego");
+            SetGameOver();
         }
     }
     public void EmpezarTurno() {
         CorreTiempo = true;
         TurnoIndex++;
         tiempoRuntime = tiempoxTurno;
-        if (TurnoIndex < NumeroTurnos)
-        {
-
-        }
-        else {
-            Debug.Log("Fin del Juego");
-            SetGameOver();
-        }
     }
     public void SetGameOver() { 
         isGameFinished = true; ;

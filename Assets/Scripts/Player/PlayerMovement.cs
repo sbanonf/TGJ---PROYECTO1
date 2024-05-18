@@ -1,12 +1,11 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
-public class PlayerMovement : MonoBehaviour
-{
+public class PlayerMovement : MonoBehaviour {
+
+
     private Vector2 mov;
     public float speed = 5f;
-
+    public bool canMove,useBoot = false;
     Rigidbody2D rb;
 
     private void Awake()
@@ -14,21 +13,32 @@ public class PlayerMovement : MonoBehaviour
         rb = GetComponent<Rigidbody2D>();
     }
 
-    // Start is called before the first frame update
-    void Start()
+    private void Start()
     {
-        
+        canMove = true;
     }
 
     // Update is called once per frame
-    void Update()
-    {
+    void Update() {
         mov = new Vector2(Input.GetAxisRaw("Horizontal"), Input.GetAxisRaw("Vertical"));
         mov.Normalize();
     }
 
-    private void FixedUpdate()
-    {
-        rb.velocity = mov * speed;
+    private void FixedUpdate() {
+        if (canMove || useBoot)
+        {
+            rb.velocity = mov * speed;
+        }
+        
+        
     }
+
+    public Vector2 GetMov() {
+        return mov;
+    }
+
+    public bool IsMoving() {
+        return mov != Vector2.zero;
+    }
+
 }

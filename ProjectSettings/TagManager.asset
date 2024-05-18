@@ -6,6 +6,8 @@ TagManager:
   tags:
   - Ingredient
   - ShoppingCar
+  - Textoxd
+  - Ice
   layers:
   - Default
   - TransparentFX
@@ -40,6 +42,9 @@ TagManager:
   - 
   - 
   m_SortingLayers:
+  - name: Foreground
+    uniqueID: 4154546539
+    locked: 0
   - name: Default
     uniqueID: 0
     locked: 0

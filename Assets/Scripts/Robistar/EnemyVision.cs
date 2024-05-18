@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using UnityEditor.Experimental.GraphView;
 using UnityEngine;
 
 public class EnemyVision : MonoBehaviour
@@ -11,7 +12,7 @@ public class EnemyVision : MonoBehaviour
     private bool flip = false;
 
     public GameObject papa;
-    public GameObject texto;
+    public GameObject exclamacion;
 
     private void Start()
     {
@@ -25,8 +26,16 @@ public class EnemyVision : MonoBehaviour
     {
         if (collision.gameObject.tag == "Player")
         {
-            Debug.Log("Me miraron feo");
+            TimeManager.instance.tiempoRuntime -= 2;
+            exclamacion.gameObject.SetActive(true);
+            Debug.Log("Ah");
             
+        }
+    }
+    private void OnTriggerExit2D(Collider2D collision)
+    {
+        if (collision.gameObject.tag == "Player") {
+            exclamacion.gameObject.SetActive(false);
         }
     }
 
