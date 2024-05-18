@@ -51,7 +51,7 @@ public class PlayerInventory : MonoBehaviour {
 		if (other.CompareTag("Ingredient")) {
 			canPick = true;
 			pickableIngredient = FindObjectOfType<ResourceSystem>().GetIngredient(
-				other.GetComponent<Ingredient>().GetIngredientType()
+				other.GetComponentInParent<Ingredient>().GetIngredientType()
 			);
 		}
 

@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 6e8b956745bcf724e8738ef55436e6d1
+guid: f85aa70665c20234982164df8a0ff04b
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -124,8 +124,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 192ba5bb670b12b409ef129b8487f811
-      internalID: 707047803
+      spriteID: a6381364e9baa0647a9ca26f26fe92ae
+      internalID: -980686963
       vertices: []
       indices: 
       edges: []
@@ -145,8 +145,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 30db40e05a3468643a8d7727ff3e254c
-      internalID: 1220581402
+      spriteID: 9fa9c93860639ba48a61e0d06db9df60
+      internalID: 1551563637
       vertices: []
       indices: 
       edges: []
@@ -166,8 +166,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: fa737b4bbaa9ff547a0376043ba42603
-      internalID: -2034458256
+      spriteID: d196c0bfde6e10346bdc161b647287b5
+      internalID: -401860532
       vertices: []
       indices: 
       edges: []
@@ -187,8 +187,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 2faa93b56fb8fd74d805162656090d81
-      internalID: 1311976168
+      spriteID: 07f0d54545ec3c642903fe4caed13113
+      internalID: 804637092
       vertices: []
       indices: 
       edges: []
@@ -204,10 +204,10 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      muebles 1_0: 707047803
-      muebles 1_1: 1220581402
-      muebles 1_2: -2034458256
-      muebles 1_3: 1311976168
+      muebles 1_0: -980686963
+      muebles 1_1: 1551563637
+      muebles 1_2: -401860532
+      muebles 1_3: 804637092
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

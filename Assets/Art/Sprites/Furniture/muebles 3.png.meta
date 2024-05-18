@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: bef16137bd2492c4aabfcf7730ad5041
+guid: ebc0eaa6648d2e64fb9a1a0b6fc5a176
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -124,8 +124,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 80b0a58347213ac4d8cd2eec1e77b85b
-      internalID: -1928372468
+      spriteID: ecb996d080da40648bf7124ae5ffc0cc
+      internalID: 1348847128
       vertices: []
       indices: 
       edges: []
@@ -145,29 +145,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 1d59ab5f96a03034eb2c8b0a1693131f
-      internalID: 2121025267
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: muebles 3_2
-      rect:
-        serializedVersion: 2
-        x: 1295
-        y: 1289
-        width: 9
-        height: 14
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 2966212ffee82564cbf0a427cbff1c58
-      internalID: -1571104539
+      spriteID: df4a67c5c52401d4fbb06be8564481b0
+      internalID: -718646013
       vertices: []
       indices: 
       edges: []
@@ -187,8 +166,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: d2286235696669744b70b85019fe2728
-      internalID: 387167914
+      spriteID: e67580982db3b7146bbcd3051f01d1d4
+      internalID: -1010597845
       vertices: []
       indices: 
       edges: []
@@ -208,8 +187,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 45dc51b9fc2d4c049898ccb74bacb565
-      internalID: 630714618
+      spriteID: 492a3a21344eaba448b19ff53d2ff952
+      internalID: 1859422912
       vertices: []
       indices: 
       edges: []
@@ -225,11 +204,11 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      muebles 3_0: -1928372468
-      muebles 3_1: 2121025267
-      muebles 3_2: -1571104539
-      muebles 3_3: 387167914
-      muebles 3_4: 630714618
+      muebles 3_0: 1348847128
+      muebles 3_1: -718646013
+      muebles 3_2: 1860856520
+      muebles 3_3: -1010597845
+      muebles 3_4: 1859422912
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
