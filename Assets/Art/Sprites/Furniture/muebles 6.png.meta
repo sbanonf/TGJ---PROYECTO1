@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: ba0242caf8bdc9647b7a1f907b066ba1
+guid: 18fc22a3cf3cddf47a103fc84e7794d4
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -110,13 +110,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Alien normal defrente_0
+      name: muebles 6_0
       rect:
         serializedVersion: 2
-        x: 255
-        y: 278
-        width: 261
-        height: 555
+        x: 109
+        y: 756
+        width: 532
+        height: 1206
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -124,20 +124,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 5e390f3679fa9ea4e95efcedcbb028d1
-      internalID: 348259740
+      spriteID: 546b8ac54c6057e4ba48de7e069a6205
+      internalID: -2037270462
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Alien normal defrente_1
+      name: muebles 6_1
       rect:
         serializedVersion: 2
-        x: 631
-        y: 278
-        width: 391
-        height: 551
+        x: 910
+        y: 822
+        width: 443
+        height: 954
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -145,20 +145,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 961b21b4c514d8049bb653d85f9854e7
-      internalID: 876900521
+      spriteID: b82addeff67a0214480de1f820d3e2dc
+      internalID: -2116899946
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Alien normal defrente_2
+      name: muebles 6_3
       rect:
         serializedVersion: 2
-        x: 1128
-        y: 274
-        width: 261
-        height: 555
+        x: 1633
+        y: 822
+        width: 505
+        height: 986
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -166,8 +166,29 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: c61afb3bd241c6642a824e71a7130cfa
-      internalID: -1301593143
+      spriteID: f2c87740a393db647a0952e7bc126025
+      internalID: 1731975281
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: muebles 6_4
+      rect:
+        serializedVersion: 2
+        x: 2385
+        y: 866
+        width: 418
+        height: 787
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 12c12cfd9782d84458bd9849d8dd6572
+      internalID: 549721280
       vertices: []
       indices: 
       edges: []
@@ -183,9 +204,11 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      Alien normal defrente_0: 348259740
-      Alien normal defrente_1: 876900521
-      Alien normal defrente_2: -1301593143
+      muebles 6_0: -2037270462
+      muebles 6_1: -2116899946
+      muebles 6_2: 1173199189
+      muebles 6_3: 1731975281
+      muebles 6_4: 549721280
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

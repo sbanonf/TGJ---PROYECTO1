@@ -47,7 +47,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   cantv: 5
-  pm: {fileID: 0}
+  playerMovement: {fileID: 0}
   tiempo: 10
   canPower: 1
 --- !u!70 &7454007859683729063
@@ -159,7 +159,7 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: 54d6e6c4b2398ab428e7c92e8cdfc131, type: 3}
-  m_Color: {r: 0.4988344, g: 1, b: 0.07843137, a: 1}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0

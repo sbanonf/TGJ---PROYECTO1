@@ -80,7 +80,6 @@ public class TimeManager : MonoBehaviour
 
     public void EmpezarTurnoRestaurante() {
         CorreTiempo = false;
-
     }
     public void SetGameOver() { 
         isGameFinished = true; ;

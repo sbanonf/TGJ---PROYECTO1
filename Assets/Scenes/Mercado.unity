@@ -551,6 +551,18 @@ PrefabInstance:
       propertyPath: m_Name
       value: Agua (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 3333177629414777365, guid: 97460f1940acc32488add28389e91dda, type: 3}
+      propertyPath: m_Size.x
+      value: 19.92
+      objectReference: {fileID: 0}
+    - target: {fileID: 3333177629414777365, guid: 97460f1940acc32488add28389e91dda, type: 3}
+      propertyPath: m_Size.y
+      value: 10.8
+      objectReference: {fileID: 0}
+    - target: {fileID: 3333177629414777365, guid: 97460f1940acc32488add28389e91dda, type: 3}
+      propertyPath: m_WasSpriteAssigned
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 5051275027694180000, guid: 97460f1940acc32488add28389e91dda, type: 3}
       propertyPath: m_LocalScale.y
       value: 1.6
@@ -958,20 +970,8 @@ PrefabInstance:
       value: ShoppingCar
       objectReference: {fileID: 0}
     - target: {fileID: 8968227876540008371, guid: b29f146b7c0d96e4bb5890daf07d9135, type: 3}
-      propertyPath: m_LocalScale.x
-      value: 1.9
-      objectReference: {fileID: 0}
-    - target: {fileID: 8968227876540008371, guid: b29f146b7c0d96e4bb5890daf07d9135, type: 3}
-      propertyPath: m_LocalScale.y
-      value: 2.85
-      objectReference: {fileID: 0}
-    - target: {fileID: 8968227876540008371, guid: b29f146b7c0d96e4bb5890daf07d9135, type: 3}
-      propertyPath: m_LocalScale.z
-      value: 1.9
-      objectReference: {fileID: 0}
-    - target: {fileID: 8968227876540008371, guid: b29f146b7c0d96e4bb5890daf07d9135, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -1.8
+      value: -0.78
       objectReference: {fileID: 0}
     - target: {fileID: 8968227876540008371, guid: b29f146b7c0d96e4bb5890daf07d9135, type: 3}
       propertyPath: m_LocalPosition.y
@@ -1008,10 +1008,6 @@ PrefabInstance:
     - target: {fileID: 8968227876540008371, guid: b29f146b7c0d96e4bb5890daf07d9135, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8968227876540008371, guid: b29f146b7c0d96e4bb5890daf07d9135, type: 3}
-      propertyPath: m_ConstrainProportionsScale
-      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
