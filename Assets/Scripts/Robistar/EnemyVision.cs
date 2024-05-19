@@ -63,7 +63,7 @@ public class EnemyVision : MonoBehaviour
             yield return null;
         }
         papa.transform.localScale = targetScale;
-        flip = !flip;
-        papa.GetComponent<SpriteRenderer>().flipX = flip;
+        //flip = !flip;
+        //papa.GetComponent<SpriteRenderer>().flipX = flip;
     }
 }
