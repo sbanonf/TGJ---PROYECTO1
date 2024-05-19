@@ -31,10 +31,7 @@ public class ChangeTimer : MonoBehaviour
 
     public void Resetear()
     {
-        TimeManager.instance.isGameFinished = false;
-        TimeManager.instance.TurnoIndex = 0;
-        TimeManager.instance.CorreTiempo = true;
-        SceneManager.LoadScene("PruebasRestaurante");
+        Debug.Log("Deberia reiniciarme, si tan solo supiera como :v");
 
     }
 
