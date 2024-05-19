@@ -42,6 +42,7 @@ public class RecipeManager : StaticInstance<RecipeManager>
             else { 
                 PlayerRecetas.Add(receta, 1); 
             }
+            PuntuacionManager.Instance.PuntuacionCount += receta.puntos;
             Debug.Log("Se preparo la receta" + receta.name);
         }
     

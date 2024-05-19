@@ -5,10 +5,13 @@ EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Scenes:
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scripts/Scenes/SampleScene.unity
     guid: 2cda990e2423bbf4892e6590ba056729
   - enabled: 1
+    path: Assets/Scripts/Scenes/Mercado.unity
+    guid: 88065c54a22c1f44db51e98d706d117a
+  - enabled: 0
     path: Assets/Scripts/Scenes/PruebasSebastian.unity
     guid: 4cbb7694cff3dae4a8e806e295809266
   - enabled: 1

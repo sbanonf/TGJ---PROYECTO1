@@ -55,14 +55,14 @@ public class TimeManager : MonoBehaviour
         if (TurnoIndex < NumeroTurnos)
         {
             //Cambia de Escena XD
-            if (SceneManager.GetActiveScene().name == "PruebasSebastian")
+            if (SceneManager.GetActiveScene().name == "Mercado")
             {
                 SceneManager.LoadScene("PruebasRestaurante");
                 EmpezarTurnoRestaurante();
             }
             else if (SceneManager.GetActiveScene().name == "PruebasRestaurante")
             {
-                SceneManager.LoadScene("PruebasSebastian");
+                SceneManager.LoadScene("Mercado");
                 EmpezarTurno();
             }
         }
