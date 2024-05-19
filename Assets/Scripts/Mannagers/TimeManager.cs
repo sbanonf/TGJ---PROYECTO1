@@ -36,24 +36,29 @@ public class TimeManager : MonoBehaviour
     }
     private void Update()
     {
-        if (!isGameFinished)
-        {
-            if (CorreTiempo) {
-                if (tiempoRuntime > 0)
+        if (SceneManager.GetActiveScene().name == "Mercado" || SceneManager.GetActiveScene().name == "PruebasRestaurante") {
+            if (!isGameFinished)
+            {
+                if (CorreTiempo)
                 {
-                    tiempoRuntime -= Time.deltaTime;
+                    if (tiempoRuntime > 0)
+                    {
+                        tiempoRuntime -= Time.deltaTime;
+                    }
+                    else
+                    {
+                        tiempoRuntime = 0;
+                        FinTurno();
+                    }
                 }
-                else
-                {
-                    tiempoRuntime = 0;
-                    FinTurno();
-                }
-            }            
-        }
-        else{
-            Debug.Log("Fin del Juego");
-            if(SceneManager.GetActiveScene().name != "GameOver")
-                SceneManager.LoadScene("GameOver");
+            }
+            else
+            {
+                Debug.Log("Fin del Juego");
+                Resetear();
+                if (SceneManager.GetActiveScene().name != "GameOver")
+                    SceneManager.LoadScene("GameOver");
+            }
         }
     }
 
@@ -90,5 +95,14 @@ public class TimeManager : MonoBehaviour
     public void SetGameOver() { 
         isGameFinished = true; ;
         SceneManager.LoadScene("WinGame");
+    }
+
+    public void Resetear()
+    {
+        isGameFinished = false;
+        CorreTiempo = false;
+        tiempoRuntime = 0;
+        tiempoxTurno = 40;
+        TurnoIndex = 0;
     }
 }
