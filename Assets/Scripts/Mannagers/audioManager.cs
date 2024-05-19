@@ -10,7 +10,7 @@ public class audioManager : StaticInstance<audioManager>
     public Sound[] sounds;
     public static float bgMusicVolume = .18f;
     public static float effectsMusicVolume = .18f;
-    Sound actualBGM;
+    static Sound actualBGM;
 
     protected override void Awake()
     {
@@ -55,6 +55,11 @@ public class audioManager : StaticInstance<audioManager>
     }
     public void updateBGMusic(string newTheme)
     {
+        if(actualBGM == null)
+        {
+            PlayBGM(newTheme);
+            updateBGValume(bgMusicVolume);
+        }
         if (actualBGM.name != newTheme)
         {
             actualBGM.source.Stop();

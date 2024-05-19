@@ -46,13 +46,19 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   bgmSounds:
   - name: Menu
-    clip: {fileID: 8300000, guid: 23d4db4be4d452540961b70e6d108f72, type: 3}
+    clip: {fileID: 8300000, guid: c396e1b11dddaea47b7cc7b79680fdb5, type: 3}
     volume: 0.8
     pitch: 1
     loop: 1
     source: {fileID: 0}
   - name: Mercado
-    clip: {fileID: 8300000, guid: cf7d6c02f807e6c488b42aa2c99e96a9, type: 3}
+    clip: {fileID: 8300000, guid: 83e14d09e853b7049a6c849dd4465f79, type: 3}
+    volume: 0.8
+    pitch: 1
+    loop: 1
+    source: {fileID: 0}
+  - name: Cocina
+    clip: {fileID: 8300000, guid: e8e9f4cec2a13c04c953de06a20c7839, type: 3}
     volume: 0.8
     pitch: 1
     loop: 1
