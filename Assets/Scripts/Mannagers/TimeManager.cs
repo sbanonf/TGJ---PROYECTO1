@@ -85,12 +85,12 @@ public class TimeManager : MonoBehaviour
     }
     public void EmpezarTurno() {
         CorreTiempo = true;
-        TurnoIndex++;
         tiempoRuntime = tiempoxTurno;
     }
 
     public void EmpezarTurnoRestaurante() {
         CorreTiempo = false;
+        TurnoIndex++;
     }
     public void SetGameOver() { 
         isGameFinished = true; ;
