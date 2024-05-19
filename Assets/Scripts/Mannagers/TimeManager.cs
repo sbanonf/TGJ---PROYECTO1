@@ -52,13 +52,13 @@ public class TimeManager : MonoBehaviour
                     }
                 }
             }
-            else
-            {
-                Debug.Log("Fin del Juego");
-                Resetear();
-                if (SceneManager.GetActiveScene().name != "GameOver")
-                    SceneManager.LoadScene("GameOver");
-            }
+            // else if (SceneManager.GetActiveScene().name != "WinGame")
+            // {
+            //     Debug.Log("Fin del Juego");
+            //     Resetear();
+            //     if (SceneManager.GetActiveScene().name != "GameOver")
+            //         SceneManager.LoadScene("GameOver");
+            // }
         }
     }
 
@@ -92,17 +92,21 @@ public class TimeManager : MonoBehaviour
         CorreTiempo = false;
         TurnoIndex++;
     }
-    public void SetGameOver() { 
-        isGameFinished = true; ;
-        SceneManager.LoadScene("WinGame");
+    public void SetGameOver() {
+        isGameFinished = true;
+        if(PuntuacionManager.Instance.pass)
+            SceneManager.LoadScene("WinGame");
+        else{
+            SceneManager.LoadScene("GameOver");
+        }
+        Resetear();  
     }
 
     public void Resetear()
     {
         isGameFinished = false;
         CorreTiempo = false;
-        tiempoRuntime = 0;
-        tiempoxTurno = 40;
+        tiempoRuntime = 40;
         TurnoIndex = 0;
     }
 }

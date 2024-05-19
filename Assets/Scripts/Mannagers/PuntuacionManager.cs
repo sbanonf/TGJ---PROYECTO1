@@ -7,12 +7,13 @@ public class PuntuacionManager : Singleton<PuntuacionManager>
 {
     public int PuntuacionCount;
     public int incremento;
+    public bool pass;
     public int MetaPuntuacion;
-    public static PuntuacionManager instance;
 
     public void FinDelTurno() {
         if (PuntuacionCount >= MetaPuntuacion)
         {
+            pass = true;
             MetaPuntuacion += incremento;
             incremento += 2;
             PuntuacionCount = 0;
@@ -20,6 +21,7 @@ public class PuntuacionManager : Singleton<PuntuacionManager>
         }
         else {
             TimeManager.instance.isGameFinished = true;
+            pass = false;
         }
  
         TimeManager.instance.FinTurno();

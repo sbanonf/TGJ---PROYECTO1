@@ -15,7 +15,7 @@ public class NextScene : MonoBehaviour
     }
 
     public void FinTurno() {
-        PuntuacionManager.Instance.FinDelTurno();
+        PuntuacionManager.Instance.PuntuacionFinal();
     }
 
     public void Reset()
