@@ -34,4 +34,12 @@ public class PuntuacionManager : Singleton<PuntuacionManager>
         FinDelTurno();
     }
 
+    public void Reset() {
+        PuntuacionCount = 0;
+        MetaPuntuacion = 10;
+        incremento = 2;
+        TimeManager.instance.CorreTiempo = true;
+        TimeManager.instance.isGameFinished = false;
+    }
+
 }
