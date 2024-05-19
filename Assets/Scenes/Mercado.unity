@@ -2565,6 +2565,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 824293280592878025, guid: b90d3fd4e976d534bbbe9097355cb142, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 1149886504, guid: 3a69872b55ad00f4b81f64b31c940fe2, type: 3}
     - target: {fileID: 6181987207645280818, guid: b90d3fd4e976d534bbbe9097355cb142, type: 3}
       propertyPath: cm1
       value: 
@@ -2805,7 +2809,7 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: -3.8636932, y: -27.28878}
+  m_Offset: {x: -3.8636932, y: -27.026672}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0, y: 0}
@@ -2816,7 +2820,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 69.695175, y: 9.661974}
+  m_Size: {x: 69.695175, y: 10.18619}
   m_EdgeRadius: 0
 --- !u!60 &1946833450
 PolygonCollider2D:
