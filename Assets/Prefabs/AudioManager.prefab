@@ -59,13 +59,13 @@ MonoBehaviour:
     source: {fileID: 0}
   sounds:
   - name: halls
-    clip: {fileID: 8300000, guid: ad42c295386e8dc4081bd0c962d4572b, type: 3}
+    clip: {fileID: 8300000, guid: 4637b23333813834bb79df33ace61c0b, type: 3}
     volume: 1
     pitch: 1
     loop: 0
     source: {fileID: 0}
   - name: beber
-    clip: {fileID: 8300000, guid: 66ee874abe320db43b9b7a026228e114, type: 3}
+    clip: {fileID: 8300000, guid: 88d402be348112946b514c7c78697324, type: 3}
     volume: 1
     pitch: 1
     loop: 0
@@ -89,19 +89,19 @@ MonoBehaviour:
     loop: 0
     source: {fileID: 0}
   - name: charco
-    clip: {fileID: 8300000, guid: b19296071a30a7947a614f4b5f9a0bec, type: 3}
+    clip: {fileID: 8300000, guid: 57bbc73102f8b7a4899f5e2eff26d80e, type: 3}
     volume: 1
     pitch: 1
     loop: 0
     source: {fileID: 0}
   - name: pasos
-    clip: {fileID: 8300000, guid: 41339ed51b3de294ea536106aaaeb9bc, type: 3}
+    clip: {fileID: 8300000, guid: a4bf2bf431a4b9445be0f88e016e04a2, type: 3}
     volume: 1
     pitch: 1
-    loop: 0
+    loop: 1
     source: {fileID: 0}
   - name: soltar
-    clip: {fileID: 8300000, guid: 75a9ab8ff2685bf43bded3d53caced9c, type: 3}
+    clip: {fileID: 8300000, guid: 37ee4387b6b1b0140ade172154582468, type: 3}
     volume: 1
     pitch: 1
     loop: 0

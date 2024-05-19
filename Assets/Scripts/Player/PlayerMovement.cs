@@ -29,7 +29,7 @@ public class PlayerMovement : MonoBehaviour {
     private void FixedUpdate() {
         if (canMove || useBoot)
         {
-            audioManager.instance.Play("pasos");
+            //audioManager.instance.Play("pasos");
             rb.velocity = mov * speed;
         }
         
