@@ -13,7 +13,8 @@ MonoBehaviour:
   m_Name: Pulchipapa
   m_EditorClassIdentifier: 
   nombre: Pulchipapa
-  Descripcion: 
+  Descripcion: "Pulchipapa, combinaci\xF3n de pulpo y papa. Presentado con especias
+    exoticas del planeta. No preguntes como conseguimos el pulpo."
   ingredientsNeeded:
   - ingrendiente: {fileID: 11400000, guid: be95665796e5505409387f40524b5273, type: 2}
     quantity: 2

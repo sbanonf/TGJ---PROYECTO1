@@ -13,7 +13,8 @@ MonoBehaviour:
   m_Name: Pulpo a la Plancha
   m_EditorClassIdentifier: 
   nombre: Pulpo a la Plancha
-  Descripcion: 
+  Descripcion: "Colocaste el pulpo en una plancha, \xA1Que innovador! Demasiado complicado
+    para un chef como Pepe."
   ingredientsNeeded:
   - ingrendiente: {fileID: 11400000, guid: be95665796e5505409387f40524b5273, type: 2}
     quantity: 3
