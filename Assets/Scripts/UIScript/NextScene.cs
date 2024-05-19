@@ -6,21 +6,7 @@ using UnityEngine.SceneManagement;
 
 public class NextScene : MonoBehaviour
 {
-
-    public string SceneName;
-
-    void Start()
-    {
-        
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
-
-    public void Next()
+    public void Next(string SceneName)
     {
       SceneManager.LoadScene(SceneName);
     }
