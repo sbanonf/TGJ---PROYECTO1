@@ -13,7 +13,11 @@ MonoBehaviour:
   m_Name: Pulpo a la Plancha
   m_EditorClassIdentifier: 
   nombre: Pulpo a la Plancha
+  Descripcion: 
   ingredientsNeeded:
   - ingrendiente: {fileID: 11400000, guid: be95665796e5505409387f40524b5273, type: 2}
-    quantity: 0
+    quantity: 3
+  - ingrendiente: {fileID: 11400000, guid: efaa0d4f501caff49a7d07ce8f073ca4, type: 2}
+    quantity: 1
   sprite: {fileID: 21300000, guid: 5de53a78577bc724db33d81c349c8d7a, type: 3}
+  puntos: 4
