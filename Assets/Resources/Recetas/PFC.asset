@@ -19,4 +19,4 @@ MonoBehaviour:
   - ingrendiente: {fileID: 11400000, guid: efaa0d4f501caff49a7d07ce8f073ca4, type: 2}
     quantity: 3
   sprite: {fileID: 21300000, guid: 5e51606ed9985254ea19d672f9780232, type: 3}
-  puntos: 2
+  puntos: 1
