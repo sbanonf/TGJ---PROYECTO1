@@ -27,6 +27,7 @@ public class EnemyVision : MonoBehaviour
             collision.gameObject.GetComponent<PlayerMovement>().canMove = false;
             collision.gameObject.GetComponent<Rigidbody2D>().velocity = new Vector2(0, 0);
             GetComponentInChildren<PolygonCollider2D>().enabled = false;
+            audioManager.Instance.Play("blabla");
             StartCoroutine(Timer2seconds());
 
             StartCoroutine(RestartCollider());
@@ -34,16 +35,11 @@ public class EnemyVision : MonoBehaviour
             exclamacion.gameObject.SetActive(true);           
         }
     }
-    private void OnTriggerExit2D(Collider2D collision)
-    {
-        if (collision.gameObject.tag == "Player") {
-            exclamacion.gameObject.SetActive(false);
-        }
-    }
 
     public IEnumerator Timer2seconds() {
         yield return new WaitForSeconds(2);
         GameObject.FindWithTag("Player").GetComponent<PlayerMovement>().canMove = true;
+        exclamacion.gameObject.SetActive(false);
     }
 
     public IEnumerator RestartCollider() {
