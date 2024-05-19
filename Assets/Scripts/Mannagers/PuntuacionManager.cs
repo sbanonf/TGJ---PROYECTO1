@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
-public class PuntuacionManager : StaticInstance<PuntuacionManager>
+public class PuntuacionManager : Singleton<PuntuacionManager>
 {
     public int PuntuacionCount;
     public int incremento;
@@ -14,6 +14,8 @@ public class PuntuacionManager : StaticInstance<PuntuacionManager>
         if (PuntuacionCount >= MetaPuntuacion)
         {
             MetaPuntuacion += incremento;
+            incremento += 2;
+            PuntuacionCount = 0;
             TimeManager.instance.CorreTiempo = true;
         }
         else {

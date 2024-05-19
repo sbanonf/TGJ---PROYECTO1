@@ -14,4 +14,8 @@ public class NextScene : MonoBehaviour
     public void Click() {
         audioManager.Instance.Play("click");
     }
+
+    public void FinTurno() {
+        PuntuacionManager.Instance.FinDelTurno();
+    }
 }
