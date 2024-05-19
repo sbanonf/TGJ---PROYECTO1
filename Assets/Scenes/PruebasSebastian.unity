@@ -431,11 +431,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1 &1502357927 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 4256090509370382215, guid: a7b44318f046d114bb7d8014cd8c2291, type: 3}
-  m_PrefabInstance: {fileID: 2277906075809625105}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1732517150
 GameObject:
   m_ObjectHideFlags: 0
@@ -717,6 +712,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   waittime: 5
+  pm: {fileID: 0}
   canPower: 1
 --- !u!212 &1809024957
 SpriteRenderer:
@@ -1070,41 +1066,17 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 897199223340581538, guid: a7b44318f046d114bb7d8014cd8c2291, type: 3}
-      propertyPath: m_Color.b
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 897199223340581538, guid: a7b44318f046d114bb7d8014cd8c2291, type: 3}
-      propertyPath: m_Color.g
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 897199223340581538, guid: a7b44318f046d114bb7d8014cd8c2291, type: 3}
-      propertyPath: m_Color.r
-      value: 1
-      objectReference: {fileID: 0}
     - target: {fileID: 6347116912142544245, guid: a7b44318f046d114bb7d8014cd8c2291, type: 3}
       propertyPath: m_Name
       value: Robistar
       objectReference: {fileID: 0}
-    - target: {fileID: 7551259894026514626, guid: a7b44318f046d114bb7d8014cd8c2291, type: 3}
-      propertyPath: texto
-      value: 
-      objectReference: {fileID: 0}
-    - target: {fileID: 7551259894026514626, guid: a7b44318f046d114bb7d8014cd8c2291, type: 3}
-      propertyPath: exclamacion
-      value: 
-      objectReference: {fileID: 1502357927}
-    - target: {fileID: 7551259894026514626, guid: a7b44318f046d114bb7d8014cd8c2291, type: 3}
-      propertyPath: lerpDuration
-      value: 1
-      objectReference: {fileID: 0}
     - target: {fileID: 8807838310822903725, guid: a7b44318f046d114bb7d8014cd8c2291, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 0
+      value: -0.47
       objectReference: {fileID: 0}
     - target: {fileID: 8807838310822903725, guid: a7b44318f046d114bb7d8014cd8c2291, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0
+      value: 1.85
       objectReference: {fileID: 0}
     - target: {fileID: 8807838310822903725, guid: a7b44318f046d114bb7d8014cd8c2291, type: 3}
       propertyPath: m_LocalPosition.z

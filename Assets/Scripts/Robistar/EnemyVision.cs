@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using Unity.VisualScripting;
 using UnityEditor.Experimental.GraphView;
 using UnityEngine;
 
@@ -19,17 +20,18 @@ public class EnemyVision : MonoBehaviour
         StartCoroutine(Timer());
     }
 
-    public IEnumerator Timer2() {
-        yield return new WaitForSeconds(1);
-    }
     private void OnTriggerEnter2D(Collider2D collision)
     {
         if (collision.gameObject.tag == "Player")
         {
-            TimeManager.instance.tiempoRuntime -= 2;
-            exclamacion.gameObject.SetActive(true);
-            Debug.Log("Ah");
+            collision.gameObject.GetComponent<PlayerMovement>().canMove = false;
+            collision.gameObject.GetComponent<Rigidbody2D>().velocity = new Vector2(0, 0);
+            GetComponentInChildren<PolygonCollider2D>().enabled = false;
+            StartCoroutine(Timer2seconds());
+
+            StartCoroutine(RestartCollider());
             
+            exclamacion.gameObject.SetActive(true);           
         }
     }
     private void OnTriggerExit2D(Collider2D collision)
@@ -39,6 +41,15 @@ public class EnemyVision : MonoBehaviour
         }
     }
 
+    public IEnumerator Timer2seconds() {
+        yield return new WaitForSeconds(2);
+        GameObject.FindWithTag("Player").GetComponent<PlayerMovement>().canMove = true;
+    }
+
+    public IEnumerator RestartCollider() {
+        yield return new WaitForSeconds(3);
+        GetComponentInChildren<PolygonCollider2D>().enabled = true;
+    }
 
     public IEnumerator Timer() {
         while (true)
@@ -63,7 +74,5 @@ public class EnemyVision : MonoBehaviour
             yield return null;
         }
         papa.transform.localScale = targetScale;
-        flip = !flip;
-        papa.GetComponent<SpriteRenderer>().flipX = flip;
     }
 }

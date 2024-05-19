@@ -7,6 +7,8 @@ public class SetearTexto : MonoBehaviour
 {
     private void Update()
     {
-        GetComponent<TextMeshProUGUI>().text = PuntuacionManager.Instance.MetaPuntuacion.ToString();
+        GetComponent<TextMeshProUGUI>().text = 
+            PuntuacionManager.Instance.PuntuacionCount.ToString() + " / " +
+            PuntuacionManager.Instance.MetaPuntuacion.ToString();
     }
 }

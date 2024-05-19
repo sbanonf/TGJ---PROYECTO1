@@ -7,14 +7,14 @@ public abstract class Collectibles : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        // Verificar si el objeto que colisionó tiene el tag "Player"
+        // Verificar si el objeto que colisionï¿½ tiene el tag "Player"
         if (collision.gameObject.CompareTag("Player"))
         {
-            Collect(collision.gameObject);
+            Collect();
         }   
 
     }
 
-    protected abstract void Collect(GameObject player);
+    protected abstract void Collect();
 
 }
