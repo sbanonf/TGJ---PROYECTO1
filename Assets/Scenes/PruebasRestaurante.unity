@@ -675,7 +675,7 @@ PrefabInstance:
     - target: {fileID: 5771884003524023602, guid: f3a2a28c7a153ae4783eb68cf406a58d, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgument
       value: 
-      objectReference: {fileID: 11400000, guid: 25b1e0e99744b5c42ab10d855dced30b, type: 2}
+      objectReference: {fileID: 11400000, guid: 51fc81835507e8844b26dcc48000ba53, type: 2}
     - target: {fileID: 5771884003524023602, guid: f3a2a28c7a153ae4783eb68cf406a58d, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
       value: ScriptableRecipe, Assembly-CSharp
