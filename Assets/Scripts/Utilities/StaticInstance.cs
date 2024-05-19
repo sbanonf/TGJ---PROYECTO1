@@ -21,7 +21,10 @@ public abstract class StaticInstance<T> : MonoBehaviour where T : MonoBehaviour 
 /// </summary>
 public abstract class Singleton<T> : StaticInstance<T> where T : MonoBehaviour {
 	protected override void Awake() {
-		if (Instance != null) Destroy(gameObject);
+		if (Instance != null){
+			Destroy(this);
+			return;
+		}
 		base.Awake();
 	}
 }
@@ -31,11 +34,13 @@ public abstract class Singleton<T> : StaticInstance<T> where T : MonoBehaviour {
 /// loads. Perfect for system classes which require stateful, persistent data. Or audio sources
 /// where music plays through loading screens, etc
 /// </summary>
-[DefaultExecutionOrder(-100)]
 public abstract class PersistentSingleton<T> : Singleton<T> where T : MonoBehaviour {
 	protected override void Awake() {
 		base.Awake();
-		DontDestroyOnLoad(gameObject);
+		if (Instance != this)
+			Destroy(gameObject);
+		else
+			DontDestroyOnLoad(gameObject);
 	}
 }
 

@@ -4,7 +4,7 @@ using UnityEngine.Audio;
 using UnityEngine.SceneManagement;
 using System.Collections;
 
-public class audioManager : StaticInstance<audioManager>
+public class audioManager : Singleton<audioManager>
 {
     public Sound[] bgmSounds;
     public Sound[] sounds;
