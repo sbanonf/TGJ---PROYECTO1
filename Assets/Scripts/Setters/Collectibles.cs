@@ -10,6 +10,7 @@ public abstract class Collectibles : MonoBehaviour
         // Verificar si el objeto que colision� tiene el tag "Player"
         if (collision.gameObject.CompareTag("Player"))
         {
+            
             Collect();
         }   
 

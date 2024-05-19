@@ -30,6 +30,7 @@ public class Obstacule : MonoBehaviour
             }
             else
             {
+                audioManager.instance.Play("charco");
                 playerMovement.canMove = false;
                 cm1.Priority = 9;
                 cm2.Priority = 11;
