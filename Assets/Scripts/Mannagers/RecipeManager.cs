@@ -1,19 +1,18 @@
 using System.Collections;
 using System.Collections.Generic;
+using Unity.VisualScripting;
 using UnityEngine;
 
-public class RecipeManager : MonoBehaviour
+public class RecipeManager : StaticInstance<RecipeManager>
 {
     public List<ScriptableRecipe> recetas;
     public Dictionary<IngredientType,int> Playeringredients;
     public Dictionary<ScriptableRecipe,int> PlayerRecetas;
-    public static RecipeManager instance;
-    private void Awake()
+    
+    protected override void Awake()
     {
-        if (instance == null)
-        {
-            instance = this;
-        }
+        base.Awake();
+       
         Playeringredients = IngredientSystem.Instance.GetAllIngredients();
         PlayerRecetas = new Dictionary<ScriptableRecipe,int>();
     }

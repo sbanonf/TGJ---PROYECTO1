@@ -16,8 +16,15 @@ MonoBehaviour:
   Descripcion: Causa de tentaculo de dudosa procedencia aderezado con salsa sola
     y con huevo de vaca
   ingredientsNeeded:
-  - ingrendiente: {fileID: 0}
+  - ingrendiente: {fileID: 11400000, guid: efaa0d4f501caff49a7d07ce8f073ca4, type: 2}
+    quantity: 2
+  - ingrendiente: {fileID: 11400000, guid: 6d62f57ebeea283409c2a77b9a6099ea, type: 2}
     quantity: 1
-  - ingrendiente: {fileID: 0}
-    quantity: 0
+  - ingrendiente: {fileID: 11400000, guid: be95665796e5505409387f40524b5273, type: 2}
+    quantity: 1
+  - ingrendiente: {fileID: 11400000, guid: e64115bd1044285489dcecb94759f060, type: 2}
+    quantity: 1
+  - ingrendiente: {fileID: 11400000, guid: d11cba9c7fae8ff49bbe4027c2d92c1e, type: 2}
+    quantity: 1
   sprite: {fileID: 21300000, guid: 63c7ca091e52398408dbf0c52fc22b99, type: 3}
+  puntos: 5

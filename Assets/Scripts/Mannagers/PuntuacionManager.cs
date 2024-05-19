@@ -3,25 +3,13 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
-public class PuntuacionManager : Singleton<PuntuacionManager>
+public class PuntuacionManager : StaticInstance<PuntuacionManager>
 {
     public int PuntuacionCount;
     public int incremento;
     public int MetaPuntuacion;
     public static PuntuacionManager instance;
-    protected override void Awake()
-    {
-        base.Awake();
-        if (instance != null && instance != this)
-        {
-            Destroy(this.gameObject);
-        }
-        else
-        {
-            instance = this;
-        }
-        DontDestroyOnLoad(this);
-    }
+
     public void FinDelTurno() {
         if (PuntuacionCount >= MetaPuntuacion)
         {
@@ -34,7 +22,7 @@ public class PuntuacionManager : Singleton<PuntuacionManager>
     }
 
     public void PuntuacionFinal() {
-        var dictionary = RecipeManager.instance.PlayerRecetas;
+        var dictionary = RecipeManager.Instance.PlayerRecetas;
         foreach (var item in dictionary)
         {
             PuntuacionCount = item.Key.puntos * item.Value;
