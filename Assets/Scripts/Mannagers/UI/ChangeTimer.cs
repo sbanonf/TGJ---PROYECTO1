@@ -31,8 +31,9 @@ public class ChangeTimer : MonoBehaviour
 
     public void Resetear()
     {
-        Debug.Log("Deberia reiniciarme, si tan solo supiera como :v");
-
+        TimeManager.instance.Resetear();
+        PuntuacionManager.Instance.Reset();
+        SceneManager.LoadScene("Menu");
     }
 
 }
