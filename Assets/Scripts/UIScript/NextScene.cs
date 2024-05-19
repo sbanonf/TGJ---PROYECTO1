@@ -10,4 +10,8 @@ public class NextScene : MonoBehaviour
     {
       SceneManager.LoadScene(SceneName);
     }
+
+    public void Click() {
+        audioManager.Instance.Play("click");
+    }
 }
