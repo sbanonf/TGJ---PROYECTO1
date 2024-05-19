@@ -79,6 +79,7 @@ public class TimeManager : MonoBehaviour
     public void EmpezarTurno() {
         if (!PuntuacionManager.pass){
             SceneManager.LoadScene("GameOver");
+            Resetear();
             return;
         }
         CorreTiempo = true;
