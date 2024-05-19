@@ -117,7 +117,7 @@ public class audioManager : StaticInstance<audioManager>
         {
             audioManager.Instance.updateBGMusic("Mercado");
         }
-        else if (SceneManager.GetActiveScene().name == "PruebaRestaurante") {
+        else if (SceneManager.GetActiveScene().name == "PruebasRestaurante") {
             audioManager.Instance.updateBGMusic("Cocina");
         }
         else if (SceneManager.GetActiveScene().name == "Menu"){
