@@ -8,20 +8,24 @@ public class BootItem : Collectibles
 {
     public float tiempo;
     public bool canWalk = true;
-    public PlayerMovement pm;
+    public PlayerMovement playerMovement;
     public CinemachineVirtualCamera cm1;
     public CinemachineVirtualCamera cm2;
 
-    protected override void Collect(GameObject player)
+    void Start()
     {
-        if (player.GetComponent<PlayerMovement>().useBoot)
+        playerMovement = GameObject.FindWithTag("Player").GetComponent<PlayerMovement>();
+    }
+
+    protected override void Collect()
+    {
+        if (playerMovement.useBoot)
         {
             return;
         }
         if (canWalk)
         {
-            pm = player.GetComponent<PlayerMovement>();
-            pm.useBoot = true;
+            playerMovement.useBoot = true;
             cm1.Priority = 11;
             cm2.Priority = 9;
             StartCoroutine(Timer2());
@@ -31,7 +35,7 @@ public class BootItem : Collectibles
     public IEnumerator Timer2()
     {
         canWalk = false;
-        this.gameObject.GetComponentInParent<SpriteRenderer>().enabled = false;
+        this.gameObject.GetComponentInChildren<SpriteRenderer>().enabled = false;
         yield return new WaitForSecondsRealtime(tiempo);
         Destroy(this.gameObject);
     }

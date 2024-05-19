@@ -5,17 +5,23 @@ using UnityEngine;
 public class StopTime : Collectibles
 {
     public float waittime;
-    public PlayerMovement pm;
+    public PlayerMovement playerMovement;
     public bool canPower = true;
-    protected override void Collect(GameObject player)
+
+    void Start()
     {
-        if (player.GetComponent<PlayerMovement>().timeOut)
+        playerMovement = GameObject.FindWithTag("Player").GetComponent<PlayerMovement>();
+    }
+    
+    protected override void Collect()
+    {
+        if (playerMovement.timeOut)
         {
             return;
         }
         if (canPower) {
             TimeManager.instance.CorreTiempo = false;
-            player.GetComponent<PlayerMovement>().timeOut = true;
+            playerMovement.timeOut = true;
             StartCoroutine(Timer2());
         }
         
@@ -23,11 +29,11 @@ public class StopTime : Collectibles
     public IEnumerator Timer2()
     {
         canPower = false;
-        this.gameObject.GetComponent<SpriteRenderer>().enabled = false;
+        GetComponentInChildren<SpriteRenderer>().enabled = false;
         yield return new WaitForSeconds(waittime);
-        pm.GetComponent<PlayerMovement>().timeOut = false;
+        playerMovement.timeOut = false;
         TimeManager.instance.CorreTiempo = true;
-        Destroy(this.gameObject);
+        Destroy(gameObject);
     }
 
 }

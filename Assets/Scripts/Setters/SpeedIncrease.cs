@@ -5,23 +5,26 @@ using UnityEngine;
 public class SpeedIncrease : Collectibles
 {
     public int cantv;
-    public PlayerMovement pm;
+    public PlayerMovement playerMovement;
     public float tiempo;
     public bool canPower = true;
+
+    void Start(){
+        playerMovement = GameObject.FindWithTag("Player").GetComponent<PlayerMovement>();
+    }
     
-    protected override void Collect(GameObject player)
+    protected override void Collect()
     {
-        if (player.GetComponent<PlayerMovement>().canRun)
+        if (playerMovement.canRun)
         {
             return;
         }
         if (canPower)
         {
-            pm = player.GetComponent<PlayerMovement>();
-            player.GetComponent<PlayerMovement>().canRun = true;    
-            float veloc = pm.speed;
+            playerMovement.canRun = true;    
+            float veloc = playerMovement.speed;
             veloc += cantv;
-            pm.speed = veloc;
+            playerMovement.speed = veloc;
             StartCoroutine(Timer2());
 
         }
@@ -32,10 +35,10 @@ public class SpeedIncrease : Collectibles
     public IEnumerator Timer2()
     {
         canPower = false;
-        this.gameObject.GetComponent<SpriteRenderer>().enabled = false;
+        this.gameObject.GetComponentInChildren<SpriteRenderer>().enabled = false;
         yield return new WaitForSecondsRealtime(tiempo);
-        pm.GetComponent<PlayerMovement>().canRun = false;
-        pm.speed -= cantv;
+        playerMovement.canRun = false;
+        playerMovement.speed -= cantv;
         Destroy(this.gameObject);
     }
 
