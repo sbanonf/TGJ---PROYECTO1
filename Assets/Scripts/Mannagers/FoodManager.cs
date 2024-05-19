@@ -22,9 +22,9 @@ public class FoodManager : MonoBehaviour
 
         for (int i = 0; i < allIngredients.Count; i++)
         {
-        //     ScriptableIngredient var = ResourceSystem.Instance.GetIngredient(ingredientKeys[i]);
-        //     images[i].sprite = var.sprite;
-        //     textos[i].text = ingredientValue[i].ToString();
+            ScriptableIngredient var = ResourceSystem.Instance.GetIngredient(ingredientKeys[i]);
+            images[i].sprite = var.sprite;
+            textos[i].text = ingredientValue[i].ToString();
             Debug.Log("Valor:"+ingredientValue[i].ToString());
             Debug.Log("Ingrediente: "+ingredientKeys[i].ToString());
         }

@@ -14,10 +14,12 @@ public class PuntuacionManager : StaticInstance<PuntuacionManager>
         if (PuntuacionCount >= MetaPuntuacion)
         {
             MetaPuntuacion += incremento;
+            TimeManager.instance.CorreTiempo = true;
         }
         else {
             TimeManager.instance.isGameFinished = true;
         }
+ 
         TimeManager.instance.FinTurno();
     }
 
