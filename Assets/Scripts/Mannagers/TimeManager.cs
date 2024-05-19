@@ -29,6 +29,7 @@ public class TimeManager : MonoBehaviour
         }
         DontDestroyOnLoad(this);
     }
+    
     private void Start()
     {
         EmpezarTurno();
@@ -48,6 +49,11 @@ public class TimeManager : MonoBehaviour
                     FinTurno();
                 }
             }            
+        }
+        else{
+            Debug.Log("Fin del Juego");
+            if(SceneManager.GetActiveScene().name != "GameOver")
+                SceneManager.LoadScene("GameOver");
         }
     }
 

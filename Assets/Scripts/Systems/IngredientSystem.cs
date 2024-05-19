@@ -29,4 +29,8 @@ public class IngredientSystem : StaticInstance<IngredientSystem>{
     {
 		return Ingredients;
     }
+
+	public void ResetIngredients() {
+		Ingredients.Clear();
+	}
 }

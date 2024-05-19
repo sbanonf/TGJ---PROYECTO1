@@ -1,7 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.UI;
 using UnityEngine.SceneManagement;
 
 public class NextScene : MonoBehaviour
@@ -17,5 +16,11 @@ public class NextScene : MonoBehaviour
 
     public void FinTurno() {
         PuntuacionManager.Instance.FinDelTurno();
+    }
+
+    public void Reset()
+    {
+        PuntuacionManager.Instance.Reset();
+        IngredientSystem.Instance.ResetIngredients();
     }
 }
