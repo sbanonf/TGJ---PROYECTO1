@@ -7,7 +7,7 @@ public class PuntuacionManager : Singleton<PuntuacionManager>
 {
     public int PuntuacionCount;
     public int incremento;
-    public bool pass;
+    static public bool pass = true;
     public int MetaPuntuacion;
 
     public void FinDelTurno() {
@@ -40,6 +40,7 @@ public class PuntuacionManager : Singleton<PuntuacionManager>
         PuntuacionCount = 0;
         MetaPuntuacion = 10;
         incremento = 2;
+        pass = true;
         TimeManager.instance.CorreTiempo = true;
         TimeManager.instance.isGameFinished = false;
     }

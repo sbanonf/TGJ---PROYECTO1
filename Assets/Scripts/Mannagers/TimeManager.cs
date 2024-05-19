@@ -52,13 +52,6 @@ public class TimeManager : MonoBehaviour
                     }
                 }
             }
-            // else if (SceneManager.GetActiveScene().name != "WinGame")
-            // {
-            //     Debug.Log("Fin del Juego");
-            //     Resetear();
-            //     if (SceneManager.GetActiveScene().name != "GameOver")
-            //         SceneManager.LoadScene("GameOver");
-            // }
         }
     }
 
@@ -84,6 +77,10 @@ public class TimeManager : MonoBehaviour
         }
     }
     public void EmpezarTurno() {
+        if (!PuntuacionManager.pass){
+            SceneManager.LoadScene("GameOver");
+            return;
+        }
         CorreTiempo = true;
         tiempoRuntime = tiempoxTurno;
     }
@@ -94,7 +91,7 @@ public class TimeManager : MonoBehaviour
     }
     public void SetGameOver() {
         isGameFinished = true;
-        if(PuntuacionManager.Instance.pass)
+        if(PuntuacionManager.pass)
             SceneManager.LoadScene("WinGame");
         else{
             SceneManager.LoadScene("GameOver");
