@@ -7,24 +7,35 @@ using UnityEngine.UI;
 
 public class FoodManager : MonoBehaviour
 {
-    public TextMeshProUGUI[] textos;
-    public Image[] images;
+
     Dictionary<IngredientType, int> allIngredients = null;
+    public GameObject prefab;
+    public GameObject papa;
 
     private void Update() {
 
-        if (allIngredients == null){
+
+    }
+    private void Start()
+    {
+        if (allIngredients == null)
+        {
             GetIngredients();
         }
-        
+
         List<IngredientType> ingredientKeys = allIngredients.Keys.ToList();
         List<int> ingredientValue = allIngredients.Values.ToList();
 
-        for (int i = 0; i < allIngredients.Count; i++)
+        for (int i = 0; i < ingredientKeys.Count; i++)
         {
+            Debug.Log("Entre");
+            Debug.Log(ingredientKeys.Count);
+            Debug.Log(allIngredients.Count);
             ScriptableIngredient var = ResourceSystem.Instance.GetIngredient(ingredientKeys[i]);
-            images[i].sprite = var.sprite;
-            textos[i].text = ingredientValue[i].ToString();
+            var aux = prefab;
+            aux.GetComponent<Image>().sprite = var.sprite;
+            aux.GetComponentInChildren<TextMeshProUGUI>().text = ingredientValue[i].ToString();
+            Instantiate(prefab, papa.transform);
         }
     }
 
