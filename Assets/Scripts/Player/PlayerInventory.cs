@@ -17,6 +17,7 @@ public class PlayerInventory : MonoBehaviour {
 		if (actualID < 3) {
 			carryIngredients[actualID] = ingredient.ingredientType;
 			transform.GetChild(actualID).GetComponent<SpriteRenderer>().sprite = ingredient.sprite;
+			audioManager.Instance.Play("coger");
 			actualID++;
 			isCarrying = true;
 		}
@@ -42,7 +43,6 @@ public class PlayerInventory : MonoBehaviour {
 			}
 
 			if (canPick) {
-				audioManager.Instance.Play("coger");
 				TakeIngredient(pickableIngredient);
 			}
 			
@@ -51,10 +51,10 @@ public class PlayerInventory : MonoBehaviour {
 
 	void OnTriggerEnter2D(Collider2D other) {
 		if (other.CompareTag("Ingredient")) {
-			canPick = true;
 			pickableIngredient = FindObjectOfType<ResourceSystem>().GetIngredient(
-				other.GetComponentInParent<Ingredient>().GetIngredientType()
-			);
+				other.GetComponentInParent<Ingredient>().GetIngredientType());
+			if( pickableIngredient.ingredientType != IngredientType.None && actualID < 3)
+				canPick = true;
 		}
 
 		else if(other.CompareTag("ShoppingCar")) {

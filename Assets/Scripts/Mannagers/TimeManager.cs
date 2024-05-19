@@ -83,6 +83,6 @@ public class TimeManager : MonoBehaviour
     }
     public void SetGameOver() { 
         isGameFinished = true; ;
-        //SceneManager.LoadScene("FinalBueno");
+        SceneManager.LoadScene("WinGame");
     }
 }
