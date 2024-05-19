@@ -31,7 +31,10 @@ public class ChangeTimer : MonoBehaviour
 
     public void Resetear()
     {
-        SceneManager.LoadScene("Mercado");
+        TimeManager.instance.isGameFinished = false;
+        TimeManager.instance.TurnoIndex = 0;
+        TimeManager.instance.CorreTiempo = true;
+        SceneManager.LoadScene("PruebasRestaurante");
 
     }
 
