@@ -1023,7 +1023,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "Ingredientes:\n\nDanna (Arte 2D)\nMarcelo (Arte 2D)\nMrElmo (Programador
+  m_text: "Ingredientes:\n\nDanna (Arte 2D)\nMarcelo (Arte 2D)\nMax (Programador
     / Dise\xF1o de Juego)\nSbanonf (Programador)\nDlamilla (Programador)\nSeniorDugo
     (Sonido / Programador)"
   m_isRightToLeft: 0
