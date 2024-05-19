@@ -387,6 +387,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   prefab: {fileID: 7863476744854370596, guid: 4f2e06c949c24d346ae64615f76dc5d1, type: 3}
   papa: {fileID: 2052886076}
+  images: []
 --- !u!4 &235287546
 Transform:
   m_ObjectHideFlags: 0
@@ -984,6 +985,30 @@ PrefabInstance:
     - target: {fileID: 1619515177474357054, guid: 54fe75959cd42b54b9143bc96155e26b, type: 3}
       propertyPath: m_Name
       value: Systems
+      objectReference: {fileID: 0}
+    - target: {fileID: 4450858863956117162, guid: 54fe75959cd42b54b9143bc96155e26b, type: 3}
+      propertyPath: bgmSounds.Array.size
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 4450858863956117162, guid: 54fe75959cd42b54b9143bc96155e26b, type: 3}
+      propertyPath: bgmSounds.Array.data[2].clip
+      value: 
+      objectReference: {fileID: 8300000, guid: e8e9f4cec2a13c04c953de06a20c7839, type: 3}
+    - target: {fileID: 4450858863956117162, guid: 54fe75959cd42b54b9143bc96155e26b, type: 3}
+      propertyPath: bgmSounds.Array.data[2].loop
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4450858863956117162, guid: 54fe75959cd42b54b9143bc96155e26b, type: 3}
+      propertyPath: bgmSounds.Array.data[2].name
+      value: Cocina
+      objectReference: {fileID: 0}
+    - target: {fileID: 4450858863956117162, guid: 54fe75959cd42b54b9143bc96155e26b, type: 3}
+      propertyPath: bgmSounds.Array.data[2].pitch
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4450858863956117162, guid: 54fe75959cd42b54b9143bc96155e26b, type: 3}
+      propertyPath: bgmSounds.Array.data[2].volume
+      value: 0.8
       objectReference: {fileID: 0}
     - target: {fileID: 7434138081679877820, guid: 54fe75959cd42b54b9143bc96155e26b, type: 3}
       propertyPath: m_LocalPosition.x
@@ -2727,7 +2752,7 @@ MonoBehaviour:
   m_HandleRect: {fileID: 1171868387}
   m_Direction: 0
   m_Value: 0
-  m_Size: 1
+  m_Size: 0.99999994
   m_NumberOfSteps: 0
   m_OnValueChanged:
     m_PersistentCalls:
@@ -4224,7 +4249,7 @@ MonoBehaviour:
   m_HandleRect: {fileID: 763299125}
   m_Direction: 2
   m_Value: 1
-  m_Size: 0.14009877
+  m_Size: 0.14009878
   m_NumberOfSteps: 0
   m_OnValueChanged:
     m_PersistentCalls:

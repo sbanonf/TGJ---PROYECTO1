@@ -25,7 +25,7 @@ public class BootItem : Collectibles
         }
         if (canWalk)
         {
-            audioManager.instance.Play("coger");
+            audioManager.Instance.Play("coger");
             playerMovement.useBoot = true;
             cm1.Priority = 11;
             cm2.Priority = 9;

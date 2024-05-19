@@ -21,7 +21,7 @@ public class SpeedIncrease : Collectibles
         }
         if (canPower)
         {
-            audioManager.instance.Play("beber");
+            audioManager.Instance.Play("beber");
             playerMovement.canRun = true;    
             float veloc = playerMovement.speed;
             veloc += cantv;

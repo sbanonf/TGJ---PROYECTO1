@@ -20,7 +20,7 @@ public class StopTime : Collectibles
             return;
         }
         if (canPower) {
-            audioManager.instance.Play("halls");
+            audioManager.Instance.Play("halls");
             TimeManager.instance.CorreTiempo = false;
             playerMovement.timeOut = true;
             StartCoroutine(Timer2());

@@ -4,24 +4,17 @@ using UnityEngine.Audio;
 using UnityEngine.SceneManagement;
 using System.Collections;
 
-public class audioManager : MonoBehaviour
+public class audioManager : StaticInstance<audioManager>
 {
     public Sound[] bgmSounds;
     public Sound[] sounds;
-    public static audioManager instance;
     public static float bgMusicVolume = .18f;
     public static float effectsMusicVolume = .18f;
     Sound actualBGM;
 
-    void Awake()
+    protected override void Awake()
     {
-        if (instance == null)
-            instance = this;
-        else
-        {
-            Destroy(gameObject);
-        }
-        DontDestroyOnLoad(gameObject);
+        base.Awake();
         foreach (Sound s in bgmSounds)
         {
             s.source = gameObject.AddComponent<AudioSource>();
@@ -39,17 +32,13 @@ public class audioManager : MonoBehaviour
             s.source.loop = s.loop;
         }
     }
-    private void Start()
-    {
-        PlayBGM("Menu");
-    }
 
     public void Play(string name)
     {
         Sound s = Array.Find(sounds, sound => sound.name == name);
         if (s == null)
         {
-            Debug.LogError("No se encontró el audio!");
+            Debug.LogError("No se encontrï¿½ el audio!");
             return;
         }
         s.source.Play();
@@ -59,7 +48,7 @@ public class audioManager : MonoBehaviour
         actualBGM = Array.Find(bgmSounds, bgmSounds => bgmSounds.name == name);
         if (actualBGM == null)
         {
-            Debug.LogError("No se encontró el audio!");
+            Debug.LogError("No se encontrï¿½ el audio!");
             return;
         }
         actualBGM.source.Play();
@@ -92,7 +81,7 @@ public class audioManager : MonoBehaviour
         Sound newBGM = Array.Find(bgmSounds, bgmSounds => bgmSounds.name == newTheme);
         if (newBGM == null)
         {
-            Debug.LogError("No se encontró el audio!");
+            Debug.LogError("No se encontrï¿½ el audio!");
             yield break;
         }
 
@@ -121,10 +110,13 @@ public class audioManager : MonoBehaviour
     {
         if (SceneManager.GetActiveScene().name == "Mercado")
         {
-            audioManager.instance.updateBGMusic("Mercado");
+            audioManager.Instance.updateBGMusic("Mercado");
         }
         else if (SceneManager.GetActiveScene().name == "PruebaRestaurante") {
-            audioManager.instance.updateBGMusic("Cocina");
+            audioManager.Instance.updateBGMusic("Cocina");
+        }
+        else if (SceneManager.GetActiveScene().name == "Menu"){
+            audioManager.Instance.updateBGMusic("Menu");
         }
 
     }

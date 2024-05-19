@@ -1914,6 +1914,10 @@ PrefabInstance:
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4450858863956117162, guid: 54fe75959cd42b54b9143bc96155e26b, type: 3}
+      propertyPath: bgmSounds.Array.data[0].volume
+      value: 0.8
+      objectReference: {fileID: 0}
+    - target: {fileID: 4450858863956117162, guid: 54fe75959cd42b54b9143bc96155e26b, type: 3}
       propertyPath: bgmSounds.Array.data[2].volume
       value: 0.8
       objectReference: {fileID: 0}
