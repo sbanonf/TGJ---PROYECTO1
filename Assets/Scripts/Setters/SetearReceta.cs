@@ -16,7 +16,7 @@ public class SetearReceta : MonoBehaviour
 
     private void Start()
     {
-        descripcion.text = recipe.Descripcion;
+        //descripcion.text = recipe.Descripcion;
         nombre.text = recipe.nombre;
         image.sprite = recipe.sprite;
         puntos.text = recipe.puntos.ToString();

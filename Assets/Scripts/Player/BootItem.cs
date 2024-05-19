@@ -31,7 +31,7 @@ public class BootItem : Collectibles
     public IEnumerator Timer2()
     {
         canWalk = false;
-        this.gameObject.GetComponent<SpriteRenderer>().enabled = false;
+        this.gameObject.GetComponentInParent<SpriteRenderer>().enabled = false;
         yield return new WaitForSecondsRealtime(tiempo);
         Destroy(this.gameObject);
     }
