@@ -36,11 +36,13 @@ public class PlayerInventory : MonoBehaviour {
 		if (Input.GetKeyDown(KeyCode.F)) {
 			if(canDrop){
 				DropIngredients();
+				audioManager.instance.Play("soltar");
 				actualID = 0;
 				isCarrying = false;
 			}
 
 			if (canPick) {
+				audioManager.instance.Play("coger");
 				TakeIngredient(pickableIngredient);
 			}
 			

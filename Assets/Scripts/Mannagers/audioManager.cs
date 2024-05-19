@@ -119,6 +119,13 @@ public class audioManager : MonoBehaviour
     }
     private void Update()
     {
+        if (SceneManager.GetActiveScene().name == "Mercado")
+        {
+            audioManager.instance.updateBGMusic("Mercado");
+        }
+        else if (SceneManager.GetActiveScene().name == "PruebaRestaurante") {
+            audioManager.instance.updateBGMusic("Cocina");
+        }
 
     }
     

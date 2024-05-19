@@ -1714,6 +1714,18 @@ MonoBehaviour:
           m_StringArgument: Creditos
           m_BoolArgument: 1
         m_CallState: 2
+      - m_Target: {fileID: 646121627}
+        m_TargetAssemblyTypeName: audioManager, Assembly-CSharp
+        m_MethodName: Play
+        m_Mode: 5
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: click
+          m_BoolArgument: 1
+        m_CallState: 2
 --- !u!114 &1012286944
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1868,6 +1880,42 @@ PrefabInstance:
     - target: {fileID: 1619515177474357054, guid: 54fe75959cd42b54b9143bc96155e26b, type: 3}
       propertyPath: m_Name
       value: Systems
+      objectReference: {fileID: 0}
+    - target: {fileID: 4450858863956117162, guid: 54fe75959cd42b54b9143bc96155e26b, type: 3}
+      propertyPath: bgmSounds.Array.size
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 4450858863956117162, guid: 54fe75959cd42b54b9143bc96155e26b, type: 3}
+      propertyPath: bgmSounds.Array.data[0].clip
+      value: 
+      objectReference: {fileID: 8300000, guid: c396e1b11dddaea47b7cc7b79680fdb5, type: 3}
+    - target: {fileID: 4450858863956117162, guid: 54fe75959cd42b54b9143bc96155e26b, type: 3}
+      propertyPath: bgmSounds.Array.data[1].clip
+      value: 
+      objectReference: {fileID: 8300000, guid: 83e14d09e853b7049a6c849dd4465f79, type: 3}
+    - target: {fileID: 4450858863956117162, guid: 54fe75959cd42b54b9143bc96155e26b, type: 3}
+      propertyPath: bgmSounds.Array.data[1].name
+      value: Mercado
+      objectReference: {fileID: 0}
+    - target: {fileID: 4450858863956117162, guid: 54fe75959cd42b54b9143bc96155e26b, type: 3}
+      propertyPath: bgmSounds.Array.data[2].clip
+      value: 
+      objectReference: {fileID: 8300000, guid: e8e9f4cec2a13c04c953de06a20c7839, type: 3}
+    - target: {fileID: 4450858863956117162, guid: 54fe75959cd42b54b9143bc96155e26b, type: 3}
+      propertyPath: bgmSounds.Array.data[2].loop
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4450858863956117162, guid: 54fe75959cd42b54b9143bc96155e26b, type: 3}
+      propertyPath: bgmSounds.Array.data[2].name
+      value: Cocina
+      objectReference: {fileID: 0}
+    - target: {fileID: 4450858863956117162, guid: 54fe75959cd42b54b9143bc96155e26b, type: 3}
+      propertyPath: bgmSounds.Array.data[2].pitch
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4450858863956117162, guid: 54fe75959cd42b54b9143bc96155e26b, type: 3}
+      propertyPath: bgmSounds.Array.data[2].volume
+      value: 0.8
       objectReference: {fileID: 0}
     - target: {fileID: 7434138081679877820, guid: 54fe75959cd42b54b9143bc96155e26b, type: 3}
       propertyPath: m_LocalPosition.x
