@@ -13,10 +13,13 @@ public class SetearReceta : MonoBehaviour
     public Image image;
     public GameObject padre;
     public GameObject padrePrefab;
-
+    public bool descriptivo = false;
     private void Start()
     {
-        //descripcion.text = recipe.Descripcion;
+        if (descriptivo) 
+        {
+            descripcion.text = recipe.Descripcion;
+        }
         nombre.text = recipe.nombre;
         image.sprite = recipe.sprite;
         puntos.text = recipe.puntos.ToString();
