@@ -2893,15 +2893,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3359275539552299311, guid: 282d7ac07d941d9479de83ea4c424feb, type: 3}
       propertyPath: m_MatchWidthOrHeight
-      value: 1
+      value: 0.5
       objectReference: {fileID: 0}
     - target: {fileID: 3359275539552299311, guid: 282d7ac07d941d9479de83ea4c424feb, type: 3}
       propertyPath: m_ReferenceResolution.x
-      value: 800
+      value: 1920
       objectReference: {fileID: 0}
     - target: {fileID: 3359275539552299311, guid: 282d7ac07d941d9479de83ea4c424feb, type: 3}
       propertyPath: m_ReferenceResolution.y
-      value: 600
+      value: 1080
       objectReference: {fileID: 0}
     - target: {fileID: 5524140181634032151, guid: 282d7ac07d941d9479de83ea4c424feb, type: 3}
       propertyPath: m_Name

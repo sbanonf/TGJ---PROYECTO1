@@ -45,6 +45,7 @@ public class RecipeManager : StaticInstance<RecipeManager>
             FoodManager.instance.Updatear();
             PuntuacionManager.Instance.PuntuacionCount += receta.puntos;
             Debug.Log("Se preparo la receta" + receta.name);
+            Debug.Log(PuntuacionManager.Instance.PuntuacionCount);
         }
     
     }

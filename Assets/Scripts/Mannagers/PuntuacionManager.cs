@@ -11,8 +11,12 @@ public class PuntuacionManager : Singleton<PuntuacionManager>
     public int MetaPuntuacion;
 
     public void FinDelTurno() {
+        Debug.Log("Fin turno");
+        Debug.Log(PuntuacionCount);
         if (PuntuacionCount >= MetaPuntuacion)
         {
+            Debug.Log("Tengo puntaje necesario");
+            Debug.Log(PuntuacionCount);
             pass = true;
             MetaPuntuacion += incremento;
             incremento += 2;
@@ -31,7 +35,8 @@ public class PuntuacionManager : Singleton<PuntuacionManager>
         var dictionary = RecipeManager.Instance.PlayerRecetas;
         foreach (var item in dictionary)
         {
-            PuntuacionCount = item.Key.puntos * item.Value;
+            Debug.Log(item.Key + ": " + item.Value + ":"+ item.Key.puntos);
+            PuntuacionCount += item.Key.puntos * item.Value;
         }
         FinDelTurno();
     }
